@@ -5,13 +5,13 @@ $R - rzeczywiste
 
 ## Kres dolny & górny w zbiorze liniowo uporządkowanym.
 
-### Def 1
->Niech
+>Def 1
+Niech:
 
     A < $R  
     A != /0  
     A : Liniowo-uporządkowany
->Wtedy
+Wtedy:
 
     A : Ograniczony-z-góry <=> 
             \/ M : $R , /\ x : A , x < M | x = M
