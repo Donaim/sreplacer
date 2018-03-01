@@ -5,19 +5,18 @@ $R - rzeczywiste
 
 ## Kres dolny & górny w zbiorze liniowo uporządkowanym.
 
->Def 1
+    Def 1  
 Niech:
-
-    A < $R  
+>   A < $R  
     A != /0  
     A : Liniowo-uporządkowany
-Wtedy:
 
-    A : Ograniczony-z-góry <=> 
+Wtedy:  
+>   A : Ograniczony-z-góry <=>   
             \/ M : $R , /\ x : A , x < M | x = M
 
-### Def 2
-
+> Def 2
+### Def 3
 
 _"
 kresem górnym nazywamy najmniejszą spośród liczb ograniczających zbiór A z góry
