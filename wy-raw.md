@@ -52,6 +52,7 @@ $N = _naturalne_
 >Def 3 -- indukcja
 
 Niech:
+
     x : $N
     f(x) : Funkcja-zdaniowa
 Wtedy:
