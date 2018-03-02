@@ -62,13 +62,13 @@ Wtedy:
 
 Niech:
 
-        "A jest ciągiem skończonym o wyrazach z ℝ+"
-    A[n] ⊂ ℝ+
-    |A[n]| = n
+        "A jest ciągiem skończonym o wyrazach z ℝ₊"
+    Aₙ ⊂ ℝ+
+    |Aₙ| = n
     
 Wtedy:
 
-    ( ∏ A[n] = 1 ) ⇒ ( ∑ A[n] ≥ n )
+    ( ∏ Aₙ = 1 ) ⇒ ( ∑ Aₙ ≥ n )
 Dowód:
 
     "Zastosujemy indukcję.
@@ -77,10 +77,10 @@ Dowód:
      z prawidłowości Tw dla n, wynika prawidłowość Tw dla n + 1."
 
     ∑, ∏ ∈ Przemienne ⇒ "możemy zmieniać kolejność wyrazów" ⇒ 
-        a[1] ≤ a[2] ≤ a[3] ≤ ... ≤ a[n] ≤ a[n+1]
+        a₁ ≤ a₂ ≤ a₃ ≤ ... ≤ aₙ ≤ aₙ₊₁
     
-    ( ∏ A[n] × a[n+1] = 1 ) ⇒ ( a[1] ≤ 1 ∧ a[n+1] ≥ 1 )
+    ( ∏ Aₙ × aₙ₊₁ = 1 ) ⇒ ( a₁ ≤ 1 ∧ aₙ₊₁ ≥ 1 )
 
-    ( ∏ A[n] × a[n+1] )  =  ( a[2] × a[3] × a[4] × ... × a[n] × ( a[1] × a[n+1] ) )  =  1
+    ( ∏ Aₙ × aₙ₊₁ )  =  ( a₂ × a₃ × a₄ × ... × aₙ × ( a₁ × aₙ₊₁ ) )  =  1
 
 

@@ -62,7 +62,7 @@ Wtedy:
 
 Niech:
 
-        "A jest ciągiem skończonym o wyrazach z $R+"
+        "A jest ciągiem skończonym o wyrazach z $R[+]"
     A[n] <: $R+
     |A[n]| = n
     
@@ -77,10 +77,10 @@ Dowód:
      z prawidłowości Tw dla n, wynika prawidłowość Tw dla n + 1."
 
     $Sum, $Product : Przemienne => "możemy zmieniać kolejność wyrazów" => 
-        a[1] <= a[2] <= a[3] <= ... <= a[n] <= a[n+1]
+        a[1] <= a[2] <= a[3] <= ... <= a[n] <= a[n][+][1]
     
-    ( $Product A[n] * a[n+1] = 1 ) => ( a[1] <= 1 , a[n+1] >= 1 )
+    ( $Product A[n] * a[n][+][1] = 1 ) => ( a[1] <= 1 , a[n][+][1] >= 1 )
 
-    ( $Product A[n] * a[n+1] )  =  ( a[2] * a[3] * a[4] * ... * a[n] * ( a[1] * a[n+1] ) )  =  1
+    ( $Product A[n] * a[n][+][1] )  =  ( a[2] * a[3] * a[4] * ... * a[n] * ( a[1] * a[n][+][1] ) )  =  1
 
 
