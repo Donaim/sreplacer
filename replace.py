@@ -15,10 +15,13 @@ repl = []
 
 def first_part(line): return line.split()[0]
 def second_part(line): return line.split()[1]
+def exact_parts(line):
+    return ("1", "0")
 
 SEPARATED_MODE = "#EXACT"
 EVERY_MODE     = "#EVERY"
 parse_mode = EVERY_MODE
+
 
 for l in lines:
     if len(l.split()) < 1: continue # l is empty
@@ -31,8 +34,7 @@ for l in lines:
     if parse_mode == EVERY_MODE:
         repl.append( (first_part(l), second_part(l)) )
     elif parse_mode == SEPARATED_MODE:
-        repl.append( (' ' + first_part(l) + ' ', ' ' + second_part(l) + ' ') )
-        repl.append( ('\t' + first_part(l) + '\t', '\t' + second_part(l) + '\t') )
+        repl.append( exact_parts(l) )
         # print(repl[-1])
 
 # print(e_codes, e_values)
