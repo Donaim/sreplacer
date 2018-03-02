@@ -53,11 +53,11 @@ $N = _naturalne_
 
 Niech:
 
-    x : $N
-    f(x) : Funkcja-zdaniowa
+    n : $N
+    f(n) : Funkcja-zdaniowa
 Wtedy:
 
-    [ f(1)  ,  /\ n : $N  ::  f(n) => f(n + 1) ]  =>  /\ n : $N  ::  f(n)
+    [ f(1)  ,  /\ n  ::  f(n) => f(n + 1) ]  =>  /\ n ::  f(n)
 
 >Tw 1
 

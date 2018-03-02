@@ -53,11 +53,11 @@ Przykłady:
 
 Niech:
 
-    x ∈ ℕ
-    f(x) ∈ Funkcja-zdaniowa
+    n ∈ ℕ
+    f(n) ∈ Funkcja-zdaniowa
 Wtedy:
 
-    [ f(1)  ∧  ∀ n ∈ ℕ  :  f(n) ⇒ f(n + 1) ]  ⇒  ∀ n ∈ ℕ  :  f(n)
+    [ f(1)  ∧  ∀ n  :  f(n) ⇒ f(n + 1) ]  ⇒  ∀ n :  f(n)
 
 >Tw 1
 
