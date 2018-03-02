@@ -1,20 +1,22 @@
 
 # Liczby rzeczywiste
 
-ℝ$R = _rzeczywiste_
+kek * aa
+
+ℝ = _rzeczywiste_
 
 ## Kres dolny & górny w zbiorze liniowo uporządkowanym.
->Def 01 -- ograniczony z góry
+>Def 1 -- ograniczony z góry
 
 Niech:
 
-    A <: ℝ$R  
-    A ≠!= ∅/0  
-    A : Liniowo-uporządkowany
+    A ⊂ ℝ  
+    A != ∅  
+    A ∈ Liniowo-uporządkowany
 Wtedy:
 
-    A : Ograniczony-z-góry ⇔<=> 
-            \/ M : ℝ$R , /\ x : A # x <= M
+    A ∈ Ograniczony-z-góry <=> 
+            \/ M ∈ ℝ ∧ ∀ x ∈ A # x <= M
 
 >Def 2 -- kres górny
 
@@ -24,63 +26,63 @@ kresem górnym nazywamy najmniejszą spośród liczb ograniczających zbiór A z
 
 Niech:
 
-    A <: ℝ$R  
-    A ≠!= ∅/0  
-    A : Liniowo-uporządkowany
+    A ⊂ ℝ  
+    A != ∅  
+    A ∈ Liniowo-uporządkowany
 Wtedy:
 
     Kres-górny(A) =
-        = min { z : ℝ$R @ /\ x : A # x <= z  } 
+        = min { z ∈ ℝ @ ∀ x ∈ A # x <= z  } 
     
-    Kres-górny(A) ⇔<=> sup(A)
+    Kres-górny(A) <⇒ sup(A)
 
 
 Przykłady:
 
-    sup( (0, 01) ) = 01
+    sup( (0, 1) ) = 1
 ---
     A = { 0.2, 0.22, 0.222, ...  }
        sup(A) = 2/9
 ---
-       sup ( (0, 01) | {2} ) = 2
-        ((notice: 2 : A))
+       sup ( (0, 1) | {2} ) = 2
+        ((notice: 2 ∈ A))
 
 # Liczby naturalne
-ℕ$N = _naturalne_
+ℕ = _naturalne_
 
 ## Indukcja
 >Def 3 -- indukcja
 
 Niech:
 
-    f(x) : Funkcja-zdaniowa(nad:ℕ$N)
+    f(x) : Funkcja-zdaniowa(nad:ℕ)
 Wtedy:
 
-    [ f(01) , /\ n : ℕ$N # (f(n) ⇒=> f(n + 01)) ] ⇒=> /\ n : ℕ$N # f(n)
+    [ f(1) , ∀ n ∈ ℕ # (f(n) => f(n + 1)) ] => /\ n ∈ ℕ # f(n)
 
->Tw 01
+>Tw 1
 
 Niech:
 
-        "A jest ciągiem skończonym o wyrazach z ℝ$R+"
-    A[n] <: ℝ$R+
+        "A jest ciągiem skończonym o wyrazach z $R+"
+    A[n] ⊂ ℝ+
     |A[n]| = n
     
 Wtedy:
 
-    ( $П(A[n]) = 01 ) ⇒=> ( ∑$Sum(A[n]) ≥>= n )
+    ( $П(A[n]) = 1 ) => ( $Sum(A[n]) >= n )
 Dowód:
 
     "Zastosujemy indukcję.
-     Dla n = 01, Tw jest oczywiste.
+     Dla n = 1, Tw jest oczywiste.
      Wybierzmy teraz dowolne n. Musimy pokazać, że
-     z prawidłowości Tw dla n, wynika prawidłowość Tw dla n + 01."
+     z prawidłowości Tw dla n, wynika prawidłowość Tw dla n + 1."
 
-    ∑$Sum, $П : Przemienne ⇒=> "możemy zmieniać kolejność wyrazów" ⇒=> 
-        a[01] <= a[2] <= a[3] <= ... <= a[n] <= a[n+01]
+    ∑, $П ∈ Przemienne ⇒ "możemy zmieniać kolejność wyrazów" => 
+        a[1] <= a[2] <= a[3] <= ... <= a[n] <= a[n+1]
     
-    ( $П(A[n]) * a[n+01] = 01 ) ⇒=> ( a[01] <= 01 , a[n+01] ≥>= 01 )
+    ( $П(A[n]) * a[n+1] = 1 ) => ( a[1] <= 1 ∧ a[n+1] >= 1 )
 
-    ( $П(A[n]) * a[n+01] )  =  ( a[2] * a[3] * a[4] * ... * a[n] * ( a[01] * a[n+01] ) )  =  01
+    ( $П(A[n]) * a[n+1] )  =  ( a[2] × a[3] × a[4] × ... × a[n] × ( a[1] × a[n+1] ) )  =  1
 
 

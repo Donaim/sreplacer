@@ -15,10 +15,21 @@ repl = []
 
 def first_part(line): return line.split()[0]
 def second_part(line): return line.split()[1]
-def exact_parts(line):
-    return ("1", "0")
+def append_separated(line):
+    p1 = first_part(line)
+    p2 = second_part(line)
+    
+    def app(space):
+        repl.append( ( space + p1 + space , space + p2 + space) )
 
-SEPARATED_MODE = "#EXACT"
+    app(' ')
+    # app('\t')
+    # app('\f')
+    # app('\n')
+    # app('\0')
+
+
+SEPARATED_MODE = "#SEPARATED"
 EVERY_MODE     = "#EVERY"
 parse_mode = EVERY_MODE
 
@@ -34,15 +45,16 @@ for l in lines:
     if parse_mode == EVERY_MODE:
         repl.append( (first_part(l), second_part(l)) )
     elif parse_mode == SEPARATED_MODE:
-        repl.append( exact_parts(l) )
+        append_separated(l)
         # print(repl[-1])
 
-# print(e_codes, e_values)
+# print(repl)
 
 
 ''' WRITING '''
 
 # fin  = open("replace.txt", "r", encoding="utf-8")
+# fin  = open("wy-copy.md", "r", encoding="utf-8")
 fin  = open("wy-raw.md", "r", encoding="utf-8")
 fout = open("wy.md", "w+", encoding="utf-8")
 
@@ -58,15 +70,18 @@ class mem(object):
         for (s, v) in repl:
             if self.data == s: 
                 fout.write(v)
+                ememory.clear()
                 return True
             if self.data in s: return True
 
 ememory = mem()
-for l in fin:  
+for l in fin:
     for ch in l: 
+        # if ch == '*' : print(len(ememory.data))
+            
         if not ememory.parse_char(ch): 
             ememory.write(fout)
-            ememory.clear()
+            ememory.data = ememory.da
 
 fin.close()
 fout.close()

@@ -1,6 +1,8 @@
 
 # Liczby rzeczywiste
 
+kek * aa
+
 $R = _rzeczywiste_
 
 ## Kres dolny & górny w zbiorze liniowo uporządkowanym.
@@ -68,7 +70,7 @@ Niech:
     
 Wtedy:
 
-    ( $П(A[n]) = 1 ) => ( $Sum(A[n]) >= n )
+    ( $Product(A[n]) = 1 ) => ( $Sum(A[n]) >= n )
 Dowód:
 
     "Zastosujemy indukcję.
@@ -76,11 +78,11 @@ Dowód:
      Wybierzmy teraz dowolne n. Musimy pokazać, że
      z prawidłowości Tw dla n, wynika prawidłowość Tw dla n + 1."
 
-    $Sum, $П : Przemienne => "możemy zmieniać kolejność wyrazów" => 
+    $Sum, $Product : Przemienne => "możemy zmieniać kolejność wyrazów" => 
         a[1] <= a[2] <= a[3] <= ... <= a[n] <= a[n+1]
     
-    ( $П(A[n]) * a[n+1] = 1 ) => ( a[1] <= 1 , a[n+1] >= 1 )
+    ( $Product(A[n]) * a[n+1] = 1 ) => ( a[1] <= 1 , a[n+1] >= 1 )
 
-    ( $П(A[n]) * a[n+1] )  =  ( a[2] * a[3] * a[4] * ... * a[n] * ( a[1] * a[n+1] ) )  =  1
+    ( $Product(A[n]) * a[n+1] )  =  ( a[2] * a[3] * a[4] * ... * a[n] * ( a[1] * a[n+1] ) )  =  1
 
 
