@@ -52,6 +52,7 @@ Przykłady:
 >Def 3 -- indukcja
 
 Niech:
+
     x ∈ ℕ
     f(x) ∈ Funkcja-zdaniowa
 Wtedy:
