@@ -1,8 +1,6 @@
 
 # Liczby rzeczywiste
 
-kek * aa
-
 ℝ = _rzeczywiste_
 
 ## Kres dolny & górny w zbiorze liniowo uporządkowanym.
@@ -11,12 +9,12 @@ kek * aa
 Niech:
 
     A ⊂ ℝ  
-    A != ∅  
+    A ≠ ∅  
     A ∈ Liniowo-uporządkowany
 Wtedy:
 
-    A ∈ Ograniczony-z-góry <=> 
-            \/ M ∈ ℝ ∧ ∀ x ∈ A # x <= M
+    A ∈ Ograniczony-z-góry ⇔ 
+           ⇔  ∃ M ∈ ℝ   ∀ x ∈ A  :  x ≤ M
 
 >Def 2 -- kres górny
 
@@ -27,14 +25,14 @@ kresem górnym nazywamy najmniejszą spośród liczb ograniczających zbiór A z
 Niech:
 
     A ⊂ ℝ  
-    A != ∅  
+    A ≠ ∅  
     A ∈ Liniowo-uporządkowany
 Wtedy:
 
     Kres-górny(A) =
-        = min { z ∈ ℝ @ ∀ x ∈ A # x <= z  } 
+        = min { z ∈ ℝ | ∀ x ∈ A  : x ≤ z  } 
     
-    Kres-górny(A) <⇒ sup(A)
+    Kres-górny(A) ⇔ sup(A)
 
 
 Przykłady:
@@ -44,7 +42,7 @@ Przykłady:
     A = { 0.2, 0.22, 0.222, ...  }
        sup(A) = 2/9
 ---
-       sup ( (0, 1) | {2} ) = 2
+       sup ( (0, 1) ∨ {2} ) = 2
         ((notice: 2 ∈ A))
 
 # Liczby naturalne
@@ -54,23 +52,23 @@ Przykłady:
 >Def 3 -- indukcja
 
 Niech:
-
-    f(x) : Funkcja-zdaniowa(nad:ℕ)
+    x ∈ ℕ
+    f(x) ∈ Funkcja-zdaniowa
 Wtedy:
 
-    [ f(1) , ∀ n ∈ ℕ # (f(n) => f(n + 1)) ] => /\ n ∈ ℕ # f(n)
+    [ f(1)  ∧  ∀ n ∈ ℕ  :  f(n) ⇒ f(n + 1) ]  ⇒  ∀ n ∈ ℕ  :  f(n)
 
 >Tw 1
 
 Niech:
 
-        "A jest ciągiem skończonym o wyrazach z $R+"
+        "A jest ciągiem skończonym o wyrazach z ℝ+"
     A[n] ⊂ ℝ+
     |A[n]| = n
     
 Wtedy:
 
-    ( $П(A[n]) = 1 ) => ( $Sum(A[n]) >= n )
+    ( ∏ A[n] = 1 ) ⇒ ( ∑ A[n] ≥ n )
 Dowód:
 
     "Zastosujemy indukcję.
@@ -78,11 +76,11 @@ Dowód:
      Wybierzmy teraz dowolne n. Musimy pokazać, że
      z prawidłowości Tw dla n, wynika prawidłowość Tw dla n + 1."
 
-    ∑, $П ∈ Przemienne ⇒ "możemy zmieniać kolejność wyrazów" => 
-        a[1] <= a[2] <= a[3] <= ... <= a[n] <= a[n+1]
+    ∑, ∏ ∈ Przemienne ⇒ "możemy zmieniać kolejność wyrazów" ⇒ 
+        a[1] ≤ a[2] ≤ a[3] ≤ ... ≤ a[n] ≤ a[n+1]
     
-    ( $П(A[n]) * a[n+1] = 1 ) => ( a[1] <= 1 ∧ a[n+1] >= 1 )
+    ( ∏ A[n] × a[n+1] = 1 ) ⇒ ( a[1] ≤ 1 ∧ a[n+1] ≥ 1 )
 
-    ( $П(A[n]) * a[n+1] )  =  ( a[2] × a[3] × a[4] × ... × a[n] × ( a[1] × a[n+1] ) )  =  1
+    ( ∏ A[n] × a[n+1] )  =  ( a[2] × a[3] × a[4] × ... × a[n] × ( a[1] × a[n+1] ) )  =  1
 
 

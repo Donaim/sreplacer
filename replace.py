@@ -19,15 +19,11 @@ def append_separated(line):
     p1 = first_part(line)
     p2 = second_part(line)
     
-    def app(space):
-        repl.append( ( space + p1 + space , space + p2 + space) )
+    def app(l1, l2, r1, r2):
+        repl.append( ( l1 + p1 + r1 , l2 + p2 + r2) )
 
-    app(' ')
-    # app('\t')
-    # app('\f')
-    # app('\n')
-    # app('\0')
-
+    app(' ', ' ', ' ', ' ')
+    app(' ', '\n', ' ', '\n')
 
 SEPARATED_MODE = "#SEPARATED"
 EVERY_MODE     = "#EVERY"
@@ -46,7 +42,6 @@ for l in lines:
         repl.append( (first_part(l), second_part(l)) )
     elif parse_mode == SEPARATED_MODE:
         append_separated(l)
-        # print(repl[-1])
 
 # print(repl)
 
@@ -58,30 +53,14 @@ for l in lines:
 fin  = open("wy-raw.md", "r", encoding="utf-8")
 fout = open("wy.md", "w+", encoding="utf-8")
 
-class mem(object):
-    def __init__(self):
-        self.data = ""
-    def add(self, c):
-        self.data += c
-    def clear(self): self.data = ""
-    def write(self, file): file.write(self.data)
-    def parse_char(self, c):
-        self.add(c)
-        for (s, v) in repl:
-            if self.data == s: 
-                fout.write(v)
-                ememory.clear()
-                return True
-            if self.data in s: return True
+raw = ""
+for line in fin:
+    raw += line
 
-ememory = mem()
-for l in fin:
-    for ch in l: 
-        # if ch == '*' : print(len(ememory.data))
-            
-        if not ememory.parse_char(ch): 
-            ememory.write(fout)
-            ememory.data = ememory.da
+for (s, v) in repl:
+    raw = raw.replace(s, v)
+
+fout.write(raw)
 
 fin.close()
 fout.close()

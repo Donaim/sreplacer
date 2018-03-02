@@ -1,8 +1,6 @@
 
 # Liczby rzeczywiste
 
-kek * aa
-
 $R = _rzeczywiste_
 
 ## Kres dolny & górny w zbiorze liniowo uporządkowanym.
@@ -16,7 +14,7 @@ Niech:
 Wtedy:
 
     A : Ograniczony-z-góry <=> 
-            \/ M : $R , /\ x : A # x <= M
+           <=>  \/ M : $R   /\ x : A  ::  x <= M
 
 >Def 2 -- kres górny
 
@@ -32,7 +30,7 @@ Niech:
 Wtedy:
 
     Kres-górny(A) =
-        = min { z : $R @ /\ x : A # x <= z  } 
+        = min { z : $R @ /\ x : A  :: x <= z  } 
     
     Kres-górny(A) <=> sup(A)
 
@@ -54,11 +52,11 @@ $N = _naturalne_
 >Def 3 -- indukcja
 
 Niech:
-
-    f(x) : Funkcja-zdaniowa(nad:$N)
+    x : $N
+    f(x) : Funkcja-zdaniowa
 Wtedy:
 
-    [ f(1) , /\ n : $N # (f(n) => f(n + 1)) ] => /\ n : $N # f(n)
+    [ f(1)  ,  /\ n : $N  ::  f(n) => f(n + 1) ]  =>  /\ n : $N  ::  f(n)
 
 >Tw 1
 
@@ -70,7 +68,7 @@ Niech:
     
 Wtedy:
 
-    ( $Product(A[n]) = 1 ) => ( $Sum(A[n]) >= n )
+    ( $Product A[n] = 1 ) => ( $Sum A[n] >= n )
 Dowód:
 
     "Zastosujemy indukcję.
@@ -81,8 +79,8 @@ Dowód:
     $Sum, $Product : Przemienne => "możemy zmieniać kolejność wyrazów" => 
         a[1] <= a[2] <= a[3] <= ... <= a[n] <= a[n+1]
     
-    ( $Product(A[n]) * a[n+1] = 1 ) => ( a[1] <= 1 , a[n+1] >= 1 )
+    ( $Product A[n] * a[n+1] = 1 ) => ( a[1] <= 1 , a[n+1] >= 1 )
 
-    ( $Product(A[n]) * a[n+1] )  =  ( a[2] * a[3] * a[4] * ... * a[n] * ( a[1] * a[n+1] ) )  =  1
+    ( $Product A[n] * a[n+1] )  =  ( a[2] * a[3] * a[4] * ... * a[n] * ( a[1] * a[n+1] ) )  =  1
 
 
