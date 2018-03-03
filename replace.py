@@ -8,7 +8,6 @@ with open("replace.txt", "r", encoding="utf-8") as file:
 lines = text.split('\n')
 # print(lines)
 
-
 ''' PARSING '''
 
 repl = []
@@ -45,6 +44,7 @@ for l in lines:
 
 # print(repl)
 
+repl = sorted(repl, key= lambda tup: -len(tup[0])) # od największego, żeby nie było konflików przy replacement
 
 ''' WRITING '''
 

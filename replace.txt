@@ -37,6 +37,8 @@ $Powerset   𝓟
 $Product     ∏
 $Sum         ∑
 $sqrt        √
+$eop         ∎
+$qed         ∎
 
 !=      ≠
 ~=      ≈
