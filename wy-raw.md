@@ -4,78 +4,78 @@
 $R = _rzeczywiste_
 
 ## Kres dolny & górny w zbiorze liniowo uporządkowanym.
->Def 1 -- ograniczony z góry
+### Def 1 -- ograniczony z góry
 
-Niech:
+> Niech:
 
     A <: $R  
     A != /0  
     A : Liniowo-uporządkowany
-Wtedy:
+> Wtedy:
 
     A : Ograniczony-z-góry <=> 
            <=>  \/ M : $R   /\ x : A  ::  x <= M
 
->Def 2 -- kres górny
+### Def 2 -- kres górny
 
-_"
-kresem górnym nazywamy najmniejszą spośród liczb ograniczających zbiór A z góry
-"_
+_kresem górnym nazywamy najmniejszą spośród liczb ograniczających zbiór A z góry_
 
-Niech:
+> Niech:
 
     A <: $R  
     A != /0  
     A : Liniowo-uporządkowany
-Wtedy:
+> Wtedy:
 
     Kres-górny(A) =
         = min { z : $R @ /\ x : A  :: x <= z  } 
     
-    Kres-górny(A) <=> sup(A)
+    Kres-górny(A) <=> sup(A) <=> "supremum A"
 
 
-Przykłady:
+> Przykłady:
 
     sup( (0, 1) ) = 1
 ---
     A = { 0.2, 0.22, 0.222, ...  }
        sup(A) = 2/9
 ---
-       sup ( (0, 1) | {2} ) = 2
+    A = (0, 1) || {2}
+       sup(A) = 2
         ((notice: 2 : A))
 
 # Liczby naturalne
 $N = _naturalne_
 
 ## Indukcja
->Def 3 -- indukcja
+### Def 3 -- indukcja
 
-Niech:
+> Niech:
 
     n : $N
     f(n) : Funkcja-zdaniowa
-Wtedy:
+> Wtedy:
 
-    [ f(1)  ,  /\ n  ::  f(n) => f(n + 1) ]  =>  /\ n ::  f(n)
+    [ f(1)  ,  /\ n  ::  f(n) => f(n + 1) ]  =>  /\ n :: f(n)
 
->Tw 1
+### Tw 1
 
-Niech:
+> Niech:
 
-        "A jest ciągiem skończonym o wyrazach z $R[+]"
-    A[n] <: $R+
+_A jest ciągiem skończonym o wyrazach z $R[+]_
+
+    n : $N
+    A[n] <: $R[+]
     |A[n]| = n
-    
-Wtedy:
+> Wtedy:
 
     ( $Product A[n] = 1 ) => ( $Sum A[n] >= n )
-Dowód:
+> Dowód:
 
-    "Zastosujemy indukcję.
-     Dla n = 1, Tw jest oczywiste.
-     Wybierzmy teraz dowolne n. Musimy pokazać, że
-     z prawidłowości Tw dla n, wynika prawidłowość Tw dla n + 1."
+_Zastosujemy indukcję._  
+_Dla n = 1, Tw jest oczywiste._  
+_Wybierzmy teraz dowolne n. Musimy pokazać, że_  
+_z prawidłowości Tw dla n, wynika prawidłowość Tw dla n + 1._  
 
     $Sum, $Product : Przemienne => "możemy zmieniać kolejność wyrazów" => 
         a[1] <= a[2] <= a[3] <= ... <= a[n] <= a[n][+][1]
