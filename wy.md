@@ -69,7 +69,7 @@ _A jest ciągiem skończonym o wyrazach z ℝ₊_
     |Aₙ| = n
 > Wtedy:
 
-    ( 𝓟roduct Aₙ = 1 ) ⇒ ( ∑ Aₙ ≥ n )
+    ( ∏ Aₙ = 1 ) ⇒ ( ∑ Aₙ ≥ n )
 > Dowód:
 
 _Zastosujemy indukcję._  
@@ -77,11 +77,11 @@ _Dla n = 1, Tw jest oczywiste._
 _Wybierzmy teraz dowolne n. Musimy pokazać, że_  
 _z prawidłowości Tw dla n, wynika prawidłowość Tw dla n + 1._  
 
-    ∑, 𝓟roduct ∈ Przemienne ⇒ "możemy zmieniać kolejność wyrazów" ⇒ 
+    ∑, ∏ ∈ Przemienne ⇒ "możemy zmieniać kolejność wyrazów" ⇒ 
         a₁ ≤ a₂ ≤ a₃ ≤ ... ≤ aₙ ≤ aₙ₊₁
     
-    ( 𝓟roduct Aₙ × aₙ₊₁ = 1 ) ⇒ ( a₁ ≤ 1 ∧ aₙ₊₁ ≥ 1 )
+    ( ∏ Aₙ × aₙ₊₁ = 1 ) ⇒ ( a₁ ≤ 1 ∧ aₙ₊₁ ≥ 1 )
 
-    ( 𝓟roduct Aₙ × aₙ₊₁ )  =  ( a₂ × a₃ × a₄ × ... × aₙ × ( a₁ × aₙ₊₁ ) )  =  1
+    ( ∏ Aₙ × aₙ₊₁ )  =  ( a₂ × a₃ × a₄ × ... × aₙ × ( a₁ × aₙ₊₁ ) )  =  1
 
 

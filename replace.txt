@@ -7,7 +7,6 @@ $R   ℝ
 $C   ℂ
 $U   𝕌
 $H   ℍ
-$P   𝓟
 
 /0      ∅
 $8      ∞
@@ -32,6 +31,8 @@ $psi        ψ
 $sigma      σ
 $omega      ω         
 $Omega      Ω
+$Ro         𝓟
+$Powerset   𝓟
 
 $Product     ∏
 $Sum         ∑
