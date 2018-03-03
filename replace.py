@@ -48,20 +48,16 @@ for l in lines:
 
 ''' WRITING '''
 
-# fin  = open("replace.txt", "r", encoding="utf-8")
-# fin  = open("wy-copy.md", "r", encoding="utf-8")
-fin  = open("wy-raw.md", "r", encoding="utf-8")
-fout = open("wy.md", "w+", encoding="utf-8")
 
 raw = ""
-for line in fin:
-    raw += line
+
+with open("wy-raw.md", "r", encoding="utf-8") as fin:
+    for line in fin:
+        raw += line
 
 for (s, v) in repl:
     raw = raw.replace(s, v)
 
-fout.write(raw)
-
-fin.close()
-fout.close()
+with open("wy.md", "w+", encoding="utf-8") as fout:
+    fout.write(raw)
 
