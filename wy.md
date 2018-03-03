@@ -1,4 +1,6 @@
 
+`27.02.18`
+
 # Liczby rzeczywiste
 
 ℝ = _rzeczywiste_
@@ -112,6 +114,23 @@ _Stąd i z założenia indukcyjnego dostajemy:_
 # Ciągi liczbowe
 ### Def 1 : ciąg liczbowy
 
+    n ∈ ℕ
     (aₙ) ⊂ 𝓟(ℝ)
     (aₙ) ∈ Ciąg-liczbowy ⇔
         ⇔ ∀ f : ℕ → (aₙ)
+
+### Def 2 : klasyfikacja ciągów
+
+Niech:
+
+    (aₙ) ∈ Ciąg-liczbowy
+Wtedy:
+    
+    1⁰ (aₙ) ∈ rosnący     ⇔ ∀ n : aₙ < aₙ₊₁
+    2⁰ (aₙ) ∈ niemalejący ⇔ ∀ n : aₙ ≤ aₙ₊₁
+    3⁰ (aₙ) ∈ malejący    ⇔ ∀ n : aₙ > aₙ₊₁
+    4⁰ (aₙ) ∈ nierosnący  ⇔ ∀ n : aₙ ≥ aₙ₊₁
+
+    5⁰ (aₙ) ∈ monotoniczny ⇔ 1⁰ ∨ 2⁰ ∨ 3⁰ ∨ 4⁰
+    6⁰ (aₙ) ∈ ściśle-monotoniczny ⇔ 1⁰ ∨ 3⁰
+

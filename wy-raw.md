@@ -1,4 +1,6 @@
 
+`27.02.18`
+
 # Liczby rzeczywiste
 
 $R = _rzeczywiste_
@@ -112,6 +114,23 @@ _Stąd i z założenia indukcyjnego dostajemy:_
 # Ciągi liczbowe
 ### Def 1 :: ciąg liczbowy
 
+    n : $N
     (a[n]) <: $Ro($R)
     (a[n]) : Ciąg-liczbowy <=>
         <=> /\ f :: $N -> (a[n])
+
+### Def 2 :: klasyfikacja ciągów
+
+Niech:
+
+    (a[n]) : Ciąg-liczbowy
+Wtedy:
+    
+    1^0 (a[n]) : rosnący     <=> /\ n :: a[n] < a[n][+][1]
+    2^0 (a[n]) : niemalejący <=> /\ n :: a[n] <= a[n][+][1]
+    3^0 (a[n]) : malejący    <=> /\ n :: a[n] > a[n][+][1]
+    4^0 (a[n]) : nierosnący  <=> /\ n :: a[n] >= a[n][+][1]
+
+    5^0 (a[n]) : monotoniczny <=> 1^0 | 2^0 | 3^0 | 4^0
+    6^0 (a[n]) : ściśle-monotoniczny <=> 1^0 | 3^0
+
