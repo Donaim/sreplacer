@@ -25,7 +25,7 @@
 
 _kresem **górnym** nazywamy **najmniejszą** spośród liczb ograniczających zbiór A **z góry**_  
 _kresem **dolnym** nazywamy **największą** spośród liczb ograniczających zbiór A **z dołu**_  
-k
+
 > Niech:
 
     A ⊂ ℝ  
@@ -113,18 +113,21 @@ _Stąd i z założenia indukcyjnego dostajemy:_
 
 # Ciągi liczbowe
 ### Def 1 : ciąg liczbowy
+> Niech
 
     n ∈ ℕ
     (aₙ) ⊂ 𝓟(ℝ)
+> Wtedy 
+
     (aₙ) ∈ Ciąg-liczbowy ⇔
-        ⇔ ∀ f : ℕ → (aₙ)
+        ⇔ ∃ f : ℕ → (aₙ) 
 
 ### Def 2 : klasyfikacja ciągów
 
-Niech:
+>Niech:
 
     (aₙ) ∈ Ciąg-liczbowy
-Wtedy:
+>Wtedy:
     
     1⁰ (aₙ) ∈ rosnący     ⇔ ∀ n : aₙ < aₙ₊₁
     2⁰ (aₙ) ∈ niemalejący ⇔ ∀ n : aₙ ≤ aₙ₊₁

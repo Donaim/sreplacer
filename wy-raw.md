@@ -25,7 +25,7 @@ $R = _rzeczywiste_
 
 _kresem **górnym** nazywamy **najmniejszą** spośród liczb ograniczających zbiór A **z góry**_  
 _kresem **dolnym** nazywamy **największą** spośród liczb ograniczających zbiór A **z dołu**_  
-k
+
 > Niech:
 
     A <: $R  
@@ -113,18 +113,21 @@ _Stąd i z założenia indukcyjnego dostajemy:_
 
 # Ciągi liczbowe
 ### Def 1 :: ciąg liczbowy
+> Niech
 
     n : $N
     (a[n]) <: $Ro($R)
+> Wtedy 
+
     (a[n]) : Ciąg-liczbowy <=>
-        <=> /\ f :: $N -> (a[n])
+        <=> \/ f :: $N -> (a[n]) 
 
 ### Def 2 :: klasyfikacja ciągów
 
-Niech:
+>Niech:
 
     (a[n]) : Ciąg-liczbowy
-Wtedy:
+>Wtedy:
     
     1^0 (a[n]) : rosnący     <=> /\ n :: a[n] < a[n][+][1]
     2^0 (a[n]) : niemalejący <=> /\ n :: a[n] <= a[n][+][1]
