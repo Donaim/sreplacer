@@ -10,7 +10,8 @@ lines = text.split('\n')
 
 ''' PARSING '''
 
-repl = []
+every = []
+sep   = []
 
 def first_part(line): return line.split()[0]
 def second_part(line): return line.split()[1]
@@ -19,7 +20,7 @@ def append_separated(line):
     p2 = second_part(line)
     
     def app(l1, l2, r1, r2):
-        repl.append( ( l1 + p1 + r1 , l2 + p2 + r2) )
+        sep.append( ( l1 + p1 + r1 , l2 + p2 + r2) )
 
     app(' ', ' ', ' ', ' ')
     app(' ', '\n', ' ', '\n')
@@ -38,13 +39,14 @@ for l in lines:
     if len(l.split()) < 2: continue
     
     if parse_mode == EVERY_MODE:
-        repl.append( (first_part(l), second_part(l)) )
+        every.append( (first_part(l), second_part(l)) )
     elif parse_mode == SEPARATED_MODE:
         append_separated(l)
 
 # print(repl)
 
-repl = sorted(repl, key= lambda tup: -len(tup[0])) # od największego, żeby nie było konflików przy replacement
+every = sorted(every, key= lambda tup: -len(tup[0])) # od największego, żeby nie było konflików przy replacement
+repl = every + sep
 
 ''' WRITING '''
 

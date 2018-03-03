@@ -4,7 +4,7 @@
 ℝ = _rzeczywiste_
 
 ## Kres górny ∧ dolny w zbiorze liniowo uporządkowanym.
-### Def 1 ∈ ograniczony z góry ∧ z dołu
+### Def 1 : ograniczony z góry ∧ z dołu
 
 > Niech:
 
@@ -14,12 +14,12 @@
 > Wtedy:
 
     A ∈ Ograniczony-z-góry ⇔ 
-           ⇔  ∃ m ∈ ℝ   ∀ x ∈ A  ∈  x ≤ m
+           ⇔  ∃ m ∈ ℝ   ∀ x ∈ A  :  x ≤ m
 
     A ∈ Ograniczony-z-dołu ⇔ 
-           ⇔  ∃ m ∈ ℝ   ∀ x ∈ A  ∈  x ≥ m
+           ⇔  ∃ m ∈ ℝ   ∀ x ∈ A  :  x ≥ m
 
-### Def 2 ∈ kres górny ∧ dolny
+### Def 2 : kres górny ∧ dolny
 
 _kresem **górnym** nazywamy **najmniejszą** spośród liczb ograniczających zbiór A **z góry**_  
 _kresem **dolnym** nazywamy **największą** spośród liczb ograniczających zbiór A **z dołu**_  
@@ -32,12 +32,12 @@ k
 > Wtedy:
 
     Kres-górny(A) =
-        = min { z ∈ ℝ | ∀ x ∈ A ∈ x ≤ z  } 
+        = min { z ∈ ℝ | ∀ x ∈ A : x ≤ z  } 
     
     Kres-górny(A) ⇔ sup(A) ⇔ "supremum A"
 
     Kres-dolny(A) =
-        = max { z ∈ ℝ | ∀ x ∈ A ∈ x ≥ z  } 
+        = max { z ∈ ℝ | ∀ x ∈ A : x ≥ z  } 
     
     Kres-dolny(A) ⇔ inf(A) ⇔ "infimum A"
 
@@ -45,10 +45,10 @@ k
 > Przykłady:
 
     sup( (0, 1) ) = 1
-::-
+---
     A = { 0.2, 0.22, 0.222, ...  }
        sup(A) = 2/9
-::-
+---
     A = (0, 1) ∪ {2}
        sup(A) = 2
         ((notice: 2 ∈ A))
@@ -57,7 +57,7 @@ k
 ℕ = _naturalne_
 
 ## Indukcja
-### Def 3 ∈ indukcja
+### Def 3 : indukcja
 
 > Niech:
 
@@ -65,7 +65,7 @@ k
     f(n) ∈ Funkcja-zdaniowa
 > Wtedy:
 
-    [ f(1)  ∧  ∀ n  ∈  f(n) ⇒ f(n + 1) ]  ⇒  ∀ n ∈ f(n)
+    [ f(1)  ∧  ∀ n  :  f(n) ⇒ f(n + 1) ]  ⇒  ∀ n : f(n)
 
 ### Tw 1 
 [wersja w j. angielskim](https://math.stackexchange.com/questions/1982625/induction-proof-if-product-of-n-numbers-is-1-sum-is-n)  
@@ -110,8 +110,8 @@ _Stąd i z założenia indukcyjnego dostajemy:_
     n + 1 + (a₁ - 1) × (1 - aₙ₊₁) ≥ n + 1 ∎
 
 # Ciągi liczbowe
-### Def 1 ∈ ciąg liczbowy
+### Def 1 : ciąg liczbowy
 
     (aₙ) ⊂ 𝓟(ℝ)
     (aₙ) ∈ Ciąg-liczbowy ⇔
-        ⇔ ∀ f ∈ ℕ → (aₙ)
+        ⇔ ∀ f : ℕ → (aₙ)
