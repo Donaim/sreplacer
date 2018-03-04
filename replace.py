@@ -1,8 +1,14 @@
 
+import sys
+input_file = sys.argv[1]
+output_file = sys.argv[2]
+replace_dict_file = sys.argv[3]
+
+
 ''' READING '''
 
 text = ""
-with open("replace.txt", "r", encoding="utf-8") as file:
+with open(replace_dict_file, "r", encoding="utf-8") as file:
     text = file.read()
 
 lines = text.split('\n')
@@ -53,13 +59,13 @@ repl = every + sep
 
 raw = ""
 
-with open("wy-raw.md", "r", encoding="utf-8") as fin:
+with open(input_file, "r", encoding="utf-8") as fin:
     for line in fin:
         raw += line
 
 for (s, v) in repl:
     raw = raw.replace(s, v)
 
-with open("wy.md", "w+", encoding="utf-8") as fout:
+with open(output_file, "w+", encoding="utf-8") as fout:
     fout.write(raw)
 
