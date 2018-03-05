@@ -1,9 +1,14 @@
 
-import sys
+import sys, os
+
 input_file = sys.argv[1]
 output_file = sys.argv[2]
-replace_dict_file = sys.argv[3]
 
+if len(sys.argv) > 3 and os.path.exists(sys.argv[3]):
+    replace_dict_file = sys.argv[3]
+else:
+    replace_dict_file = os.path.join(os.path.dirname(sys.argv[0]), "stdreplace.txt")
+    print("sreplacer uses {} as dict file ".format(replace_dict_file))
 
 ''' READING '''
 
@@ -68,4 +73,6 @@ for (s, v) in repl:
 
 with open(output_file, "w+", encoding="utf-8") as fout:
     fout.write(raw)
+
+print("replaced text in {} with table {} and output in {}".format(input_file, replace_dict_file, output_file))
 
