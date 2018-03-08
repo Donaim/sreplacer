@@ -1,5 +1,10 @@
+#!env python3
 
 import sys, os
+
+if len(sys.argv) < 3:
+    print("Usage: {} <input> <output> [stdreplace.txt]".format(os.path.basename(sys.argv[0])))
+    sys.exit()
 
 input_file = sys.argv[1]
 output_file = sys.argv[2]
@@ -7,7 +12,7 @@ output_file = sys.argv[2]
 if len(sys.argv) > 3 and os.path.exists(sys.argv[3]):
     replace_dict_file = sys.argv[3]
 else:
-    replace_dict_file = os.path.join(os.path.dirname(sys.argv[0]), "stdreplace.txt")
+    replace_dict_file = os.path.join(os.path.dirname(os.path.realpath(sys.argv[0])), "stdreplace.txt")
     print("sreplacer uses {} as dict file ".format(replace_dict_file))
 
 ''' READING '''
@@ -29,7 +34,7 @@ def second_part(line): return line.split()[1]
 def append_separated(line):
     p1 = first_part(line)
     p2 = second_part(line)
-    
+
     def app(l1, l2, r1, r2):
         sep.append( ( l1 + p1 + r1 , l2 + p2 + r2) )
 
@@ -48,7 +53,7 @@ for l in lines:
         else: continue # ignoring lines that starts with '#'
 
     if len(l.split()) < 2: continue
-    
+
     if parse_mode == EVERY_MODE:
         every.append( (first_part(l), second_part(l)) )
     elif parse_mode == SEPARATED_MODE:
